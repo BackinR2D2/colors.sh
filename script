@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+for i in {0..255}; do
+        color=$(tput setaf $i)
+        normal=$(tput sgr0)
+        printf "%s" "${color}$i${normal} "
+        sleep 0.1
+        # echo "$i"
+done
+
+echo
